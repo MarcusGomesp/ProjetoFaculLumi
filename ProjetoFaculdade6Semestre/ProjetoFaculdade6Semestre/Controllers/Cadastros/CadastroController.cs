@@ -4,7 +4,7 @@ using ProjetoFaculdade6Semestre.Interfaces;
 using ProjetoFaculdade6Semestre.Model.Log;
 using ProjetoFaculdade6Semestre.Models;
 
-namespace ProjetoFaculdade6Semestre.Controllers
+namespace ProjetoFaculdade6Semestre.Controllers.Cadastros
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -37,8 +37,8 @@ namespace ProjetoFaculdade6Semestre.Controllers
             return Ok(cadastro);
         }
 
-        // POST: api/Cadastro
-        [HttpPost]
+        // POST: api/Cadastro/adicionar
+        [HttpPost("adicionar")]
         public async Task<ActionResult<Cadastro>> PostCadastro([FromBody ]Cadastro cadastro)
         {
             try

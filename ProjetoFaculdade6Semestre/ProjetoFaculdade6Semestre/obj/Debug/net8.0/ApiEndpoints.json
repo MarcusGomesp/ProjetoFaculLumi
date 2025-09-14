@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CadastroController",
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.Cadastros.CadastroController",
     "Method": "GetCadastro",
     "RelativePath": "api/Cadastro",
     "HttpMethod": "GET",
@@ -20,33 +20,7 @@
     ]
   },
   {
-    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CadastroController",
-    "Method": "PostCadastro",
-    "RelativePath": "api/Cadastro",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cadastro",
-        "Type": "ProjetoFaculdade6Semestre.Models.Cadastro",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ProjetoFaculdade6Semestre.Models.Cadastro",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CadastroController",
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.Cadastros.CadastroController",
     "Method": "GetCadastrID",
     "RelativePath": "api/Cadastro/{id}",
     "HttpMethod": "GET",
@@ -72,7 +46,7 @@
     ]
   },
   {
-    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CadastroController",
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.Cadastros.CadastroController",
     "Method": "DeleteCadastro",
     "RelativePath": "api/Cadastro/{id}",
     "HttpMethod": "DELETE",
@@ -88,7 +62,33 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CadastroController",
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.Cadastros.CadastroController",
+    "Method": "PostCadastro",
+    "RelativePath": "api/Cadastro/adicionar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cadastro",
+        "Type": "ProjetoFaculdade6Semestre.Models.Cadastro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProjetoFaculdade6Semestre.Models.Cadastro",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.Cadastros.CadastroController",
     "Method": "LoginAsync",
     "RelativePath": "api/Cadastro/login",
     "HttpMethod": "POST",
@@ -99,6 +99,22 @@
         "Name": "login",
         "Type": "ProjetoFaculdade6Semestre.Model.Log.Login",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.TesteUploadArquivosController",
+    "Method": "UploaArquivo",
+    "RelativePath": "api/TesteUploadArquivos/analise-arquivo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

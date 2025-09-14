@@ -36,6 +36,7 @@ namespace ProjetoFaculdade6Semestre.Service
             try
             {
                 cadastro.Senha = Utils.PasswordHasher.HashPassword(cadastro.Senha);
+                cadastro.ConfirmarSenha = Utils.PasswordHasher.HashPassword(cadastro.ConfirmarSenha);
                 _context.Cadastros.Add(cadastro);
 
                 var result = _context.SaveChangesAsync();
@@ -60,7 +61,9 @@ namespace ProjetoFaculdade6Semestre.Service
             
             // Verificar a senha usando o PasswordHasher
             bool isPasswordValid = Utils.PasswordHasher.VerifyPassword(login.Senha, cadastro.Senha);
-            if (!isPasswordValid)
+            bool isConfirmarSenhaValid = Utils.PasswordHasher.VerifyPassword(login.Senha, cadastro.ConfirmarSenha); //adicioado confirmação de senha
+
+            if (!isPasswordValid || !isConfirmarSenhaValid)
                 throw new Exception("Email ou senha inválidos.");
            
             return new

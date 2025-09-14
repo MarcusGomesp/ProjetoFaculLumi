@@ -55,6 +55,14 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "DocumentFormat.OpenXmlSDK": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Google.Cloud.AIPlatform.V1": {
+              "target": "Package",
+              "version": "[3.45.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -75,9 +83,17 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "PdfPig": {
+              "target": "Package",
+              "version": "[0.1.11, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "System.IO.Packaging": {
+              "target": "Package",
+              "version": "[9.0.9, )"
             }
           },
           "imports": [

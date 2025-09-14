@@ -3,40 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\service\\cadastroservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\service\\cadastroservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\controllers\\cadastrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\controllers\\cadastrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\interface\\icadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\interface\\icadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\utils\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\utils\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\model\\log\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\model\\log\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\model\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\model\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\service\\aiservice\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\service\\aiservice\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\interface\\ai\\iopenaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\interface\\ai\\iopenaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\controllers\\testeuploadarquivoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\controllers\\testeuploadarquivoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\controllers\\cadastros\\cadastrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\controllers\\cadastros\\cadastrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,116 +38,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1003,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Utils\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Utils\\PasswordHasher.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Utils\\PasswordHasher.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Utils\\PasswordHasher.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T15:38:47.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Model\\Log\\Login.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Model\\Log\\Login.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Model\\Log\\Login.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\Log\\Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T15:34:36.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Program.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Program.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Program.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T15:10:05.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CadastroController.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Controllers\\CadastroController.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Controllers\\CadastroController.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Controllers\\CadastroController.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\CadastroController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwEcAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T15:03:15.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\DbContext\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\DbContext\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\DbContext\\AppDbContext.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\DbContext\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T14:43:18.808Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CadastroServices.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Service\\CadastroServices.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Service\\CadastroServices.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Service\\CadastroServices.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\CadastroServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T14:32:45.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICadastro.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Interface\\ICadastro.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Interface\\ICadastro.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Interface\\ICadastro.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\ICadastro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T14:29:23.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\appsettings.Development.json",
               "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\appsettings.Development.json",
               "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\appsettings.Development.json",
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-07T14:27:40.34Z"
+              "WhenOpened": "2025-09-14T16:07:03.671Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Cadastro.cs",
-              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Model\\Cadastro.cs",
-              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Model\\Cadastro.cs",
-              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Model\\Cadastro.cs",
-              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\Cadastro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\appsettings.json",
+              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\appsettings.json",
+              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\appsettings.json",
+              "RelativeToolTip": "ProjetoFaculdade6Semestre\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-14T16:06:58.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GeminiService.cs",
+              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T14:25:01.028Z"
+              "WhenOpened": "2025-09-14T16:06:37.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOpenAIService.cs",
+              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Interface\\AI\\IOpenAIService.cs",
+              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Interface\\AI\\IOpenAIService.cs",
+              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Interface\\AI\\IOpenAIService.cs",
+              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\AI\\IOpenAIService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:06:27.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TesteUploadArquivosController.cs",
+              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Controllers\\TesteUploadArquivosController.cs",
+              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Controllers\\TesteUploadArquivosController.cs",
+              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Controllers\\TesteUploadArquivosController.cs",
+              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\TesteUploadArquivosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:02:24.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CadastroController.cs",
+              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Controllers\\Cadastros\\CadastroController.cs",
+              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Controllers\\Cadastros\\CadastroController.cs",
+              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Controllers\\Cadastros\\CadastroController.cs",
+              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\Cadastros\\CadastroController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:01:26.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Program.cs",
+              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Program.cs",
+              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Program.cs",
+              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T15:59:13.348Z"
             }
           ]
         }

@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using ProjetoFaculdade6Semestre;
+using ProjetoFaculdade6Semestre.Interface.AI;
 using ProjetoFaculdade6Semestre.Interfaces;
 using ProjetoFaculdade6Semestre.Service;
+using ProjetoFaculdade6Semestre.Service.AIService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Injeção de dependência para o serviço de cadastro
 builder.Services.AddScoped<ICadastro, CadastroServices>();
+builder.Services.AddScoped<IOpenAIService, GeminiService>();
 
 
 // Add services to the container.

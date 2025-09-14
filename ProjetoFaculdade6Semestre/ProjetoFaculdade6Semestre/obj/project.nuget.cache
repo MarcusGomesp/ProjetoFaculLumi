@@ -1,12 +1,28 @@
 {
   "version": 2,
-  "dgSpecHash": "35HP5MMzxH4=",
+  "dgSpecHash": "u8l5W8AhYUs=",
   "success": true,
   "projectFilePath": "C:\\Users\\marcu\\OneDrive\\Área de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marcu\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\documentformat.openxmlsdk\\2.0.0\\documentformat.openxmlsdk.2.0.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.api.commonprotos\\2.17.0\\google.api.commonprotos.2.17.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.api.gax\\4.11.0\\google.api.gax.4.11.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.api.gax.grpc\\4.11.0\\google.api.gax.grpc.4.11.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.apis\\1.69.0\\google.apis.1.69.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.apis.auth\\1.69.0\\google.apis.auth.1.69.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.apis.core\\1.69.0\\google.apis.core.1.69.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.cloud.aiplatform.v1\\3.45.0\\google.cloud.aiplatform.v1.3.45.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.cloud.iam.v1\\3.4.0\\google.cloud.iam.v1.3.4.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.cloud.location\\2.3.0\\google.cloud.location.2.3.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.longrunning\\3.3.0\\google.longrunning.3.3.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\google.protobuf\\3.31.1\\google.protobuf.3.31.1.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\grpc.auth\\2.71.0\\grpc.auth.2.71.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\grpc.core.api\\2.71.0\\grpc.core.api.2.71.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\grpc.net.client\\2.71.0\\grpc.net.client.2.71.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\grpc.net.common\\2.71.0\\grpc.net.common.2.71.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\microsoft.build.framework\\17.8.3\\microsoft.build.framework.17.8.3.nupkg.sha512",
@@ -52,12 +68,14 @@
     "C:\\Users\\marcu\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\pdfpig\\0.1.11\\pdfpig.0.1.11.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
-    "C:\\Users\\marcu\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.composition.attributedmodel\\7.0.0\\system.composition.attributedmodel.7.0.0.nupkg.sha512",
@@ -70,7 +88,9 @@
     "C:\\Users\\marcu\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.formats.asn1\\9.0.8\\system.formats.asn1.9.0.8.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\system.io.packaging\\9.0.9\\system.io.packaging.9.0.9.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.io.pipelines\\9.0.8\\system.io.pipelines.9.0.8.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -91,5 +111,18 @@
     "C:\\Users\\marcu\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "O pacote 'DocumentFormat.OpenXmlSDK 2.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "projectPath": "C:\\Users\\marcu\\OneDrive\\Área de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\marcu\\OneDrive\\Área de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj",
+      "libraryId": "DocumentFormat.OpenXmlSDK",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
