@@ -2,6 +2,7 @@
 using ProjetoFaculdade6Semestre.Interfaces;
 using ProjetoFaculdade6Semestre.Model.Log;
 using ProjetoFaculdade6Semestre.Models;
+using ProjetoFaculdade6Semestre.Utils;
 
 namespace ProjetoFaculdade6Semestre.Service
 {
@@ -35,8 +36,7 @@ namespace ProjetoFaculdade6Semestre.Service
         {
             try
             {
-                cadastro.Senha = Utils.PasswordHasher.HashPassword(cadastro.Senha);
-                cadastro.ConfirmarSenha = Utils.PasswordHasher.HashPassword(cadastro.ConfirmarSenha);
+                cadastro.Senha = PasswordHasher.HashPassword(cadastro.Senha);
                 _context.Cadastros.Add(cadastro);
 
                 var result = _context.SaveChangesAsync();
@@ -55,15 +55,17 @@ namespace ProjetoFaculdade6Semestre.Service
 
         public async Task<object> LoginAsync(Login login)
         {
-            var cadastro = await _context.Cadastros.FirstOrDefaultAsync(c => c.Email == login.Email);
+            var cadastro = await _context.Cadastros
+                .FirstOrDefaultAsync(c => c.Email == login.Email);
+
+
             if (cadastro == null)
                 throw new Exception("Email ou senha inválidos.");
             
             // Verificar a senha usando o PasswordHasher
-            bool isPasswordValid = Utils.PasswordHasher.VerifyPassword(login.Senha, cadastro.Senha);
-            bool isConfirmarSenhaValid = Utils.PasswordHasher.VerifyPassword(login.Senha, cadastro.ConfirmarSenha); //adicioado confirmação de senha
+            bool isPasswordValid = PasswordHasher.VerifyPassword(login.Senha, cadastro.Senha);
 
-            if (!isPasswordValid || !isConfirmarSenhaValid)
+            if (!isPasswordValid)
                 throw new Exception("Email ou senha inválidos.");
            
             return new

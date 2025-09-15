@@ -220,7 +220,6 @@
     "schemas": {
       "Cadastro": {
         "required": [
-          "confirmarSenha",
           "email",
           "nome",
           "senha"
@@ -243,12 +242,8 @@
             "type": "string"
           },
           "senha": {
-            "maxLength": 100,
+            "maxLength": 255,
             "minLength": 6,
-            "type": "string"
-          },
-          "confirmarSenha": {
-            "minLength": 1,
             "type": "string"
           }
         },

@@ -17,11 +17,9 @@ namespace ProjetoFaculdade6Semestre.Models
         public string? Nome{ get; set; }
 
         [Required]
-        [StringLength(100, MinimumLength = 6)]
+        [StringLength(255, MinimumLength = 6)]
         public string? Senha { get; set; }
 
-        [Required]
-        [Compare("Senha", ErrorMessage = "As senhas não coincidem.")]
-        public string? ConfirmarSenha { get; set; }
+  
     }
 }
