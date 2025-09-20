@@ -63,6 +63,10 @@
               "target": "Package",
               "version": "[3.45.0, )"
             },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -83,13 +87,17 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "PdfPig": {
               "target": "Package",
               "version": "[0.1.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[6.9.0, )"
             },
             "System.IO.Packaging": {
               "target": "Package",

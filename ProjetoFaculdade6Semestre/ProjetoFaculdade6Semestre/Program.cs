@@ -1,21 +1,25 @@
-using Microsoft.EntityFrameworkCore;
+ï»¿using Microsoft.EntityFrameworkCore;
 using ProjetoFaculdade6Semestre;
 using ProjetoFaculdade6Semestre.Interface.AI;
 using ProjetoFaculdade6Semestre.Interfaces;
 using ProjetoFaculdade6Semestre.Service;
 using ProjetoFaculdade6Semestre.Service.AIService;
+using ProjetoFaculdade6Semestre.Controllers;
+using ProjetoFaculdade6Semestre.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-// configuração do APPDbContext com SQL Server
+// configuraï¿½ï¿½o do APPDbContext com SQL Server
 var conectionString = builder.Configuration.GetConnectionString("ConectFacul");
-builder.Services.AddDbContext<AppDbContext>(options =>
+
+builder.Services.AddDbContext<AppDbContextLumi>(options =>
     options.UseSqlServer(conectionString));
 
 
-// Injeção de dependência para o serviço de cadastro
-builder.Services.AddScoped<ICadastro, CadastroServices>();
+// Injeï¿½ï¿½o de dependï¿½ncia para o serviï¿½o de cadastro
+builder.Services.AddScoped<IUser, UserServices>();
+builder.Services.AddScoped<IRole, RoleServices>();
 builder.Services.AddScoped<IOpenAIService, GeminiService>();
 
 
