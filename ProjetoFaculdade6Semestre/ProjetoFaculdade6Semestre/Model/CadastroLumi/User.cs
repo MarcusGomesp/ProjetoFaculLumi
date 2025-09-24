@@ -25,8 +25,6 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
         [JsonIgnore]
         public Role? Role { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
 
 
     }

@@ -20,13 +20,11 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
 
         public string? Resume { get; set; }
 
-        [StringLength(255)]
+        [Column(TypeName = "nvarchar(max)")]
         public string? File { get; set; }
 
         [StringLength(50)]
         public string? Status { get; set; }
-
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     }
 }

@@ -1,7 +1,9 @@
-﻿namespace ProjetoFaculdade6Semestre.Interface.AI
+﻿using ProjetoFaculdade6Semestre.Model.CadastroLumi;
+
+namespace ProjetoFaculdade6Semestre.Interface.AI
 {
     public interface IOpenAIService
     {
-        Task<string> AnalisarTexto(string textoCurriculo);
+        Task<Result> AnalisarCurriculoAsync(string texto, int roleId, int cvId);
     }
 }

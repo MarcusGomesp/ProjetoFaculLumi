@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|c:\\users\\marcu\\onedrive\\\u00E1rea de trabalho\\projetofaculdade-6semestre\\projetofaculdade6semestre\\projetofaculdade6semestre\\service\\aiservice\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5FF5FFE-BCA3-4678-A2DF-9B17D497DAC6}|ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre.csproj|solutionrelative:projetofaculdade6semestre\\service\\aiservice\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +28,22 @@
               "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\appsettings.Development.json",
               "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\appsettings.Development.json",
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-20T01:44:31.703Z",
+              "WhenOpened": "2025-09-24T00:46:38.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GeminiService.cs",
+              "DocumentMoniker": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\AIService\\GeminiService.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T23:53:44.516Z",
               "EditorCaption": ""
             }
           ]

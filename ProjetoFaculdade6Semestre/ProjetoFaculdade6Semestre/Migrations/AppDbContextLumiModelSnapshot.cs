@@ -41,11 +41,21 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<DateTime>("UploadDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.HasKey("CvId");
 
-                    b.ToTable("Cvs", (string)null);
+                    b.ToTable("Cvs");
+
+                    b.HasData(
+                        new
+                        {
+                            CvId = 1,
+                            FileName = "cv_admin.pdf",
+                            FilePath = "/uploads/cv_admin.pdf"
+                        });
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>
@@ -57,14 +67,15 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ResultId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<int>("CvId")
                         .HasColumnType("int");
 
                     b.Property<string>("File")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Percentual")
                         .HasColumnType("decimal(5,2)");
@@ -80,7 +91,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
                     b.HasIndex("CvId");
 
-                    b.ToTable("Results", (string)null);
+                    b.ToTable("Results");
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Role", b =>
@@ -92,7 +103,9 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<int>("CvId")
                         .HasColumnType("int");
@@ -114,7 +127,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Roles", (string)null);
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", b =>
@@ -126,7 +139,9 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -150,7 +165,16 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            Email = "admin@teste.com",
+                            PasswordHash = "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi",
+                            UserName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>

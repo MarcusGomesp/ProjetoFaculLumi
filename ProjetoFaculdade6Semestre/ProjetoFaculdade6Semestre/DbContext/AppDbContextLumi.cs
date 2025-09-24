@@ -6,9 +6,8 @@ namespace ProjetoFaculdade6Semestre
 {
     public class AppDbContextLumi : DbContext
     {
-
         public AppDbContextLumi(DbContextOptions<AppDbContextLumi> options) : base(options)
-        { 
+        {
         }
 
         public DbSet<User> Users { get; set; }
@@ -16,20 +15,19 @@ namespace ProjetoFaculdade6Semestre
         public DbSet<Cv> Cvs { get; set; }
         public DbSet<Result> Results { get; set; }
 
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Tabela Users
+           
+            // Configurações de Relacionamentos
+          
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
                 .HasForeignKey(u => u.RoleId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Tabela Roles
             modelBuilder.Entity<Role>()
                 .HasOne(r => r.Cv)
                 .WithMany(c => c.Roles)
@@ -42,19 +40,50 @@ namespace ProjetoFaculdade6Semestre
                 .HasForeignKey(r => r.OwnerId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Tabela Cvs
             modelBuilder.Entity<Cv>()
                 .HasMany(c => c.Results)
                 .WithOne(r => r.Cv)
                 .HasForeignKey(r => r.CvId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Result
             modelBuilder.Entity<Result>()
                 .Property(r => r.Percentual)
                 .HasColumnType("decimal(5,2)");
+
+           
+          
+            modelBuilder.Entity<User>()
+                .Property<DateTime>("CreatedAt")
+                .HasDefaultValueSql("GETUTCDATE()");
+
+            modelBuilder.Entity<Cv>()
+                .Property<DateTime>("UploadDate")
+                .HasDefaultValueSql("GETUTCDATE()");
+
+            modelBuilder.Entity<Role>()
+                .Property<DateTime>("CreatedAt")
+                .HasDefaultValueSql("GETUTCDATE()");
+
+            modelBuilder.Entity<Result>()
+                .Property<DateTime>("CreatedAt")
+                .HasDefaultValueSql("GETUTCDATE()");
+
+          
+     
+            modelBuilder.Entity<User>().HasData(new User
+            {
+                UserId = 1,
+                UserName = "Admin",
+                Email = "admin@teste.com",
+                PasswordHash = "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi"
+            });
+
+            modelBuilder.Entity<Cv>().HasData(new Cv
+            {
+                CvId = 1,
+                FileName = "cv_admin.pdf",
+                FilePath = "/uploads/cv_admin.pdf"
+            });
         }
-
-
     }
 }

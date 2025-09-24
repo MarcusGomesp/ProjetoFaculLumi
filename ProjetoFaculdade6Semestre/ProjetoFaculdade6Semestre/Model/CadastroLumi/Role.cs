@@ -28,8 +28,6 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
         [JsonIgnore]
         public User? Owner { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
         [JsonIgnore]
         public ICollection<User>? Users { get; set; }
     }

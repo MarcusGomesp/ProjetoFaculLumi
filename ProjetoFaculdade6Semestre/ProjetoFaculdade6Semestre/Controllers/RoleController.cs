@@ -49,7 +49,7 @@ namespace ProjetoFaculdade6Semestre.Controllers
             catch (Exception ex)
             {
 
-                return BadRequest($"Error loading Role: {ex.Message}");
+                return BadRequest($"Error ao carregar Role: {ex.Message}");
             }
         }
 

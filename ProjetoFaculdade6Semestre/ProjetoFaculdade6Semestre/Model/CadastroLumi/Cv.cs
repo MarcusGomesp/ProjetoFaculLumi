@@ -13,7 +13,6 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
 
         [Required, StringLength(255)]
         public string? FilePath { get; set; }
-        public DateTime UploadDate { get; set; } = DateTime.UtcNow;
         
         [JsonIgnore]
         public ICollection<Role>? Roles { get; set; }

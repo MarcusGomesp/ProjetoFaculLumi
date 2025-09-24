@@ -20,6 +20,10 @@ builder.Services.AddDbContext<AppDbContextLumi>(options =>
 // Inje��o de depend�ncia para o servi�o de cadastro
 builder.Services.AddScoped<IUser, UserServices>();
 builder.Services.AddScoped<IRole, RoleServices>();
+builder.Services.AddScoped<ICv, CvServices>();
+builder.Services.AddScoped<IResults, ResultService>();
+
+
 builder.Services.AddScoped<IOpenAIService, GeminiService>();
 
 

@@ -43,7 +43,7 @@ namespace ProjetoFaculdade6Semestre.Service
             }
             catch (Exception ex)
             {
-                throw new Exception($"Erro ao Cadastrar: {ex.Message}");
+                throw new Exception($"Erro ao Salvar Roles: {ex.Message}");
             }
         }
 
