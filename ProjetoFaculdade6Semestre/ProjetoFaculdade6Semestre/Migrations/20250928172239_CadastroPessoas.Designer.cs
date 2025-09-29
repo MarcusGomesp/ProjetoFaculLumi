@@ -12,8 +12,8 @@ using ProjetoFaculdade6Semestre;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     [DbContext(typeof(AppDbContextLumi))]
-    [Migration("20250923222752_AlterarTamanhoColunaFile")]
-    partial class AlterarTamanhoColunaFile
+    [Migration("20250928172239_CadastroPessoas")]
+    partial class CadastroPessoas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,32 @@ namespace ProjetoFaculdade6Semestre.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Candidatura", b =>
+                {
+                    b.Property<int>("CandidaturaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CandidaturaId"));
+
+                    b.Property<DateTime>("DataCandidatura")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CandidaturaId");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Candidaturas");
+                });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", b =>
                 {
@@ -178,6 +204,25 @@ namespace ProjetoFaculdade6Semestre.Migrations
                             PasswordHash = "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi",
                             UserName = "Admin"
                         });
+                });
+
+            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Candidatura", b =>
+                {
+                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>

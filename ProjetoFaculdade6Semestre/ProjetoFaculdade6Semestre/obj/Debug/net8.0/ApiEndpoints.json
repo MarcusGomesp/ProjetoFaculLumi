@@ -1,5 +1,52 @@
 [
   {
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CandidaturaController",
+    "Method": "ListarCandidaturas",
+    "RelativePath": "api/Candidatura",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CandidaturaController",
+    "Method": "CriarCandidatura",
+    "RelativePath": "api/Candidatura/{userId}/{roleId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CandidaturaController",
+    "Method": "ListarPorUsuario",
+    "RelativePath": "api/Candidatura/usuario/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProjetoFaculdade6Semestre.Controllers.CvController",
     "Method": "GetCv",
     "RelativePath": "api/Cv",

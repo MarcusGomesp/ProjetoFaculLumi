@@ -37,14 +37,14 @@ namespace ProjetoFaculdade6Semestre.Service
         {
             try
             {
-              
+
                 cadastro.PasswordHash = PasswordHasher.HashPassword(cadastro.PasswordHash);
 
                 _context.Users.Add(cadastro);
 
-                var result = await _context.SaveChangesAsync(); 
+                var result = await _context.SaveChangesAsync();
 
-                if (result <= 0) 
+                if (result <= 0)
                     throw new Exception("Ocorreu um erro ao salvar o cadastro.");
 
                 return cadastro;
@@ -64,8 +64,8 @@ namespace ProjetoFaculdade6Semestre.Service
             if (cadastro == null)
                 throw new Exception("Email ou senha inválidos.");
 
-            
-            
+
+
             // Verificar a senha usando o PasswordHasher
             bool isPasswordValid = PasswordHasher.VerifyPassword(login.Senha, cadastro.PasswordHash);
 

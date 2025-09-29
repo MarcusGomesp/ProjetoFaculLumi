@@ -22,6 +22,32 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Candidatura", b =>
+                {
+                    b.Property<int>("CandidaturaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CandidaturaId"));
+
+                    b.Property<DateTime>("DataCandidatura")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CandidaturaId");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Candidaturas", (string)null);
+                });
+
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", b =>
                 {
                     b.Property<int>("CvId")
@@ -47,7 +73,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
                     b.HasKey("CvId");
 
-                    b.ToTable("Cvs");
+                    b.ToTable("Cvs", (string)null);
 
                     b.HasData(
                         new
@@ -91,7 +117,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
                     b.HasIndex("CvId");
 
-                    b.ToTable("Results");
+                    b.ToTable("Results", (string)null);
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Role", b =>
@@ -127,7 +153,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", b =>
@@ -165,7 +191,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasData(
                         new
@@ -175,6 +201,25 @@ namespace ProjetoFaculdade6Semestre.Migrations
                             PasswordHash = "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi",
                             UserName = "Admin"
                         });
+                });
+
+            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Candidatura", b =>
+                {
+                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>

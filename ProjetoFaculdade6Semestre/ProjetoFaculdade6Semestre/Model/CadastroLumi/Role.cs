@@ -21,7 +21,7 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
         public Cv? Cv { get; set; }
         public string? RoleDescription { get; set; }
 
-       
+
         [ForeignKey("Owner")]
         public int OwnerId { get; set; }
 

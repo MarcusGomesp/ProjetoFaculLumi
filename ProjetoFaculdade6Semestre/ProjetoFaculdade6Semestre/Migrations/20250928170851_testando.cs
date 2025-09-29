@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     /// <inheritdoc />
-    public partial class testeNewData : Migration
+    public partial class testando : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,7 +35,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     CvId = table.Column<int>(type: "int", nullable: false),
                     Percentual = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     Resume = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    File = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    File = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
                 },

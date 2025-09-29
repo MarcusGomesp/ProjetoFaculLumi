@@ -14,14 +14,15 @@ namespace ProjetoFaculdade6Semestre
         public DbSet<Role> Roles { get; set; }
         public DbSet<Cv> Cvs { get; set; }
         public DbSet<Result> Results { get; set; }
+        public DbSet<Candidatura> Candidaturas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-           
+
             // Configurações de Relacionamentos
-          
+
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
@@ -50,8 +51,20 @@ namespace ProjetoFaculdade6Semestre
                 .Property(r => r.Percentual)
                 .HasColumnType("decimal(5,2)");
 
-           
-          
+            modelBuilder.Entity<Candidatura>()
+               .HasOne(c => c.User)
+               .WithMany()
+               .HasForeignKey(c => c.UserId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Candidatura>()
+                .HasOne(c => c.Role)
+                .WithMany()
+                .HasForeignKey(c => c.RoleId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
+
             modelBuilder.Entity<User>()
                 .Property<DateTime>("CreatedAt")
                 .HasDefaultValueSql("GETUTCDATE()");
@@ -68,8 +81,8 @@ namespace ProjetoFaculdade6Semestre
                 .Property<DateTime>("CreatedAt")
                 .HasDefaultValueSql("GETUTCDATE()");
 
-          
-     
+
+
             modelBuilder.Entity<User>().HasData(new User
             {
                 UserId = 1,

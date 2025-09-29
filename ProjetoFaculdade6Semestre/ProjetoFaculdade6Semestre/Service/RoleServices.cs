@@ -36,7 +36,7 @@ namespace ProjetoFaculdade6Semestre.Service
             {
                 _context.Roles.Add(role);
                 var result = await _context.SaveChangesAsync();
-                
+
                 if (result <= 0)
                     throw new Exception("Ocorreu um erro ao salvar o Role.");
                 return role;
@@ -50,12 +50,12 @@ namespace ProjetoFaculdade6Semestre.Service
         public async Task<bool> DeletarAsync(int id)
         {
             var role = await _context.Roles.FirstOrDefaultAsync(x => x.RoleId == id);
-           
+
             if (role == null)
                 throw new Exception($"Role com ID {id} não encontrado.");
-            
-           _context.Roles.Remove(role);
-             await _context.SaveChangesAsync();
+
+            _context.Roles.Remove(role);
+            await _context.SaveChangesAsync();
             return true;
         }
 

@@ -21,7 +21,7 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
 
         [ForeignKey("Role")]
         public int? RoleId { get; set; }
-        
+
         [JsonIgnore]
         public Role? Role { get; set; }
 

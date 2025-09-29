@@ -8,7 +8,7 @@ namespace ProjetoFaculdade6Semestre.Service
     {
         private readonly AppDbContextLumi _context;
 
-        public ResultService (AppDbContextLumi context)
+        public ResultService(AppDbContextLumi context)
         {
             _context = context;
         }

@@ -16,7 +16,7 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
         public Cv? Cv { get; set; }
 
         [Column(TypeName = "decimal(5,2)")]
-        public decimal Percentual{ get; set; }
+        public decimal Percentual { get; set; }
 
         public string? Resume { get; set; }
 

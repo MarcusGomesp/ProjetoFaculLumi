@@ -12,8 +12,8 @@ using ProjetoFaculdade6Semestre;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     [DbContext(typeof(AppDbContextLumi))]
-    [Migration("20250923220034_testeNewData")]
-    partial class testeNewData
+    [Migration("20250928170851_testando")]
+    partial class testando
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,8 +78,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("File")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Percentual")
                         .HasColumnType("decimal(5,2)");

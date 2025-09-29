@@ -40,7 +40,7 @@ namespace ProjetoFaculdade6Semestre.Controllers
 
         // POST: api/Cadastro/adicionar
         [HttpPost("adicionar")]
-        public async Task<ActionResult<User>> PostCadastro([FromBody ] User cadastro)
+        public async Task<ActionResult<User>> PostCadastro([FromBody] User cadastro)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace ProjetoFaculdade6Semestre.Controllers
 
                 return Ok(result);
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
                 return BadRequest($"Erro ao logar: {ex.Message}");
             }
@@ -79,7 +79,7 @@ namespace ProjetoFaculdade6Semestre.Controllers
         public async Task<IActionResult> DeleteCadastro([FromRoute] int id)
         {
             var success = await _contextService.DeletarAsync(id);
-           
+
             if (!success)
                 return NotFound();
 

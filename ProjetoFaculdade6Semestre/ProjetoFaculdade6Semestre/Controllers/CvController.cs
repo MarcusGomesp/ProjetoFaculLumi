@@ -67,7 +67,7 @@ namespace ProjetoFaculdade6Semestre.Controllers
                         return BadRequest("Formato não suportado.");
                 }
 
-               
+
                 var result = await _openAIService.AnalisarCurriculoAsync(textoExtraido, roleId, cvSalvo.CvId);
 
                 _context.Results.Add(result);
