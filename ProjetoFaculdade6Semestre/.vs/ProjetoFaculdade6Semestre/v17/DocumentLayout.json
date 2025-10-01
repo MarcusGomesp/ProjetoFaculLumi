@@ -164,7 +164,7 @@
               "RelativeDocumentMoniker": "ProjetoFaculdade6Semestre\\appsettings.Development.json",
               "ToolTip": "C:\\Users\\marcu\\OneDrive\\\u00C1rea de Trabalho\\ProjetoFaculdade-6semestre\\ProjetoFaculdade6Semestre\\ProjetoFaculdade6Semestre\\appsettings.Development.json",
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-01T00:17:58.36Z",
               "EditorCaption": ""
@@ -179,8 +179,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:17:47.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:17:47.866Z"
             },
             {
               "$type": "Document",
@@ -192,8 +191,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Utils\\PasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:17:42.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:17:42.199Z"
             },
             {
               "$type": "Document",
@@ -205,8 +203,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\CandidaturaService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:17:32.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:17:32.266Z"
             },
             {
               "$type": "Document",
@@ -218,8 +215,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\CvServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:17:29.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:17:29.8Z"
             },
             {
               "$type": "Document",
@@ -231,8 +227,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\ResultService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:17:29.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:17:29.019Z"
             },
             {
               "$type": "Document",
@@ -244,8 +239,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\RoleServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:17:28.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:17:28.164Z"
             },
             {
               "$type": "Document",
@@ -257,8 +251,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Service\\UserServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:17:27.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:17:27.351Z"
             },
             {
               "$type": "Document",
@@ -270,8 +263,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\Log\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:36.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:36.714Z"
             },
             {
               "$type": "Document",
@@ -283,8 +275,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\DTO\\ResultGeminiDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:33.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:33.383Z"
             },
             {
               "$type": "Document",
@@ -296,8 +287,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\DTO\\CandidaturaDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:32.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:32.498Z"
             },
             {
               "$type": "Document",
@@ -309,8 +299,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\CadastroLumi\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:29.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:29.535Z"
             },
             {
               "$type": "Document",
@@ -322,8 +311,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\CadastroLumi\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:28.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:28.819Z"
             },
             {
               "$type": "Document",
@@ -335,8 +323,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\CadastroLumi\\Result.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:27.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:27.657Z"
             },
             {
               "$type": "Document",
@@ -348,8 +335,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\CadastroLumi\\Cv.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:26.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:26.005Z"
             },
             {
               "$type": "Document",
@@ -361,8 +347,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Model\\CadastroLumi\\Candidatura.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:16:25.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:16:25.03Z"
             },
             {
               "$type": "Document",
@@ -374,8 +359,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\ICadastro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:15:45.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:15:45.093Z"
             },
             {
               "$type": "Document",
@@ -387,8 +371,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\ICv.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:15:44.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:15:44.267Z"
             },
             {
               "$type": "Document",
@@ -400,8 +383,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\IResults.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:15:43.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:15:43.543Z"
             },
             {
               "$type": "Document",
@@ -413,8 +395,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\IRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:15:42.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:15:42.645Z"
             },
             {
               "$type": "Document",
@@ -426,8 +407,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\IUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:15:41.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:15:41.225Z"
             },
             {
               "$type": "Document",
@@ -439,8 +419,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Helpers\\PdfHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:58.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:58.314Z"
             },
             {
               "$type": "Document",
@@ -452,8 +431,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Helpers\\DocxHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:56.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:56.73Z"
             },
             {
               "$type": "Document",
@@ -465,8 +443,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Helpers\\CsvHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:44.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:44.106Z"
             },
             {
               "$type": "Document",
@@ -478,8 +455,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Interface\\AI\\IOpenAIService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:29.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:29.653Z"
             },
             {
               "$type": "Document",
@@ -491,8 +467,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:20.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:20.264Z"
             },
             {
               "$type": "Document",
@@ -504,8 +479,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:19.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:19.595Z"
             },
             {
               "$type": "Document",
@@ -517,8 +491,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\ResultController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:18.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:18.751Z"
             },
             {
               "$type": "Document",
@@ -530,8 +503,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\CvController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:14:17.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:14:17.706Z"
             },
             {
               "$type": "Document",
@@ -543,8 +515,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\DbContext\\AppDbContextLumi.cs",
               "ViewState": "AgIAACcAAAAAAAAAAADwv2UAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:13:47.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:13:47.747Z"
             },
             {
               "$type": "Document",
@@ -556,8 +527,7 @@
               "RelativeToolTip": "ProjetoFaculdade6Semestre\\Controllers\\CandidaturaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T00:13:39.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T00:13:39.256Z"
             }
           ]
         }
