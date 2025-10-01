@@ -12,8 +12,8 @@ using ProjetoFaculdade6Semestre;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     [DbContext(typeof(AppDbContextLumi))]
-    [Migration("20250928170851_testando")]
-    partial class testando
+    [Migration("20250918225649_TesteData2")]
+    partial class TesteData2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,21 +44,11 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<DateTime>("UploadDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("CvId");
 
                     b.ToTable("Cvs");
-
-                    b.HasData(
-                        new
-                        {
-                            CvId = 1,
-                            FileName = "cv_admin.pdf",
-                            FilePath = "/uploads/cv_admin.pdf"
-                        });
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>
@@ -70,15 +60,14 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ResultId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CvId")
                         .HasColumnType("int");
 
                     b.Property<string>("File")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<decimal>("Percentual")
                         .HasColumnType("decimal(5,2)");
@@ -106,9 +95,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CvId")
                         .HasColumnType("int");
@@ -142,9 +129,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -169,15 +154,6 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            Email = "admin@teste.com",
-                            PasswordHash = "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi",
-                            UserName = "Admin"
-                        });
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>

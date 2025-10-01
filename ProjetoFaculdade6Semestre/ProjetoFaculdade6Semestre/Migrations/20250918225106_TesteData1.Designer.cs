@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoFaculdade6Semestre;
 
@@ -11,9 +12,11 @@ using ProjetoFaculdade6Semestre;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     [DbContext(typeof(AppDbContextLumi))]
-    partial class AppDbContextLumiModelSnapshot : ModelSnapshot
+    [Migration("20250918225106_TesteData1")]
+    partial class TesteData1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,32 +24,6 @@ namespace ProjetoFaculdade6Semestre.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Candidatura", b =>
-                {
-                    b.Property<int>("CandidaturaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CandidaturaId"));
-
-                    b.Property<DateTime>("DataCandidatura")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CandidaturaId");
-
-                    b.HasIndex("RoleId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Candidaturas");
-                });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", b =>
                 {
@@ -67,21 +44,11 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<DateTime>("UploadDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("CvId");
 
                     b.ToTable("Cvs");
-
-                    b.HasData(
-                        new
-                        {
-                            CvId = 1,
-                            FileName = "cv_admin.pdf",
-                            FilePath = "/uploads/cv_admin.pdf"
-                        });
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>
@@ -93,15 +60,14 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ResultId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CvId")
                         .HasColumnType("int");
 
                     b.Property<string>("File")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<decimal>("Percentual")
                         .HasColumnType("decimal(5,2)");
@@ -129,9 +95,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CvId")
                         .HasColumnType("int");
@@ -165,9 +129,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -179,7 +141,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("RoleId")
+                    b.Property<int>("RoleId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
@@ -192,34 +154,6 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            Email = "admin@teste.com",
-                            PasswordHash = "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi",
-                            UserName = "Admin"
-                        });
-                });
-
-            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Candidatura", b =>
-                {
-                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Role", "Role")
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Role");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>
@@ -257,7 +191,8 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Role");
                 });

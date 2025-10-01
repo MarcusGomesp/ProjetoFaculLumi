@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     /// <inheritdoc />
-    public partial class testando : Migration
+    public partial class NewDataBaseFacul : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FileName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     FilePath = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    UploadDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
+                    UploadDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -35,9 +35,9 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     CvId = table.Column<int>(type: "int", nullable: false),
                     Percentual = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     Resume = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    File = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    File = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,7 +60,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     CvId = table.Column<int>(type: "int", nullable: false),
                     RoleDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     OwnerId = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -82,8 +82,8 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     UserName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    RoleId = table.Column<int>(type: "int", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
+                    RoleId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -95,16 +95,6 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         principalColumn: "RoleId",
                         onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.InsertData(
-                table: "Cvs",
-                columns: new[] { "CvId", "FileName", "FilePath" },
-                values: new object[] { 1, "cv_admin.pdf", "/uploads/cv_admin.pdf" });
-
-            migrationBuilder.InsertData(
-                table: "Users",
-                columns: new[] { "UserId", "Email", "PasswordHash", "RoleId", "UserName" },
-                values: new object[] { 1, "admin@teste.com", "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi", null, "Admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Results_CvId",
