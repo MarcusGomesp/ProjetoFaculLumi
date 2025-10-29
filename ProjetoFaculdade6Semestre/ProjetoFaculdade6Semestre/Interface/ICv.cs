@@ -6,7 +6,7 @@ namespace ProjetoFaculdade6Semestre.Interface
     {
         Task<IEnumerable<Cv>> ListToAsync();
         Task<Cv> ListPorIdAsync(int id);
-        Task<Cv> AdicionarAsync(IFormFile file);
+        Task<Cv> AdicionarAsync(IFormFile file, int userId);
         Task<bool> DeletarAsync(int id);
     }
 }

@@ -42,14 +42,14 @@ namespace ProjetoFaculdade6Semestre.Controllers
 
         // POST: api/Cv/upload-e-aplicar/{roleId}
         [HttpPost("upload-e-aplicar/{roleId}")]
-        public async Task<IActionResult> UploadEAplicar(int roleId, IFormFile file)
+        public async Task<IActionResult> UploadEAplicar(int roleId, [FromQuery] int userId, IFormFile file)
         {
             if (file == null || file.Length == 0)
                 return BadRequest("Nenhum arquivo enviado.");
 
             try
             {
-                var cvSalvo = await _cvService.AdicionarAsync(file);
+                var cvSalvo = await _cvService.AdicionarAsync(file, userId);
 
                 var role = await _context.Roles.FindAsync(roleId);
                 if (role == null)
@@ -64,9 +64,8 @@ namespace ProjetoFaculdade6Semestre.Controllers
                     else if (extension == ".docx")
                         textoExtraido = DocxHelper.ExtrairTexto(stream);
                     else
-                        return BadRequest("Formato não suportado.");
+                        return BadRequest("Formato de arquivo não suportado (use PDF ou DOCX).");
                 }
-
 
                 var result = await _openAIService.AnalisarCurriculoAsync(textoExtraido, roleId, cvSalvo.CvId);
 
@@ -75,7 +74,7 @@ namespace ProjetoFaculdade6Semestre.Controllers
 
                 return Ok(new
                 {
-                    Mensagem = "Currículo enviado e avaliado com sucesso",
+                    Mensagem = "Currículo enviado e avaliado com sucesso ✅",
                     Cv = cvSalvo,
                     Resultado = result
                 });
@@ -85,6 +84,7 @@ namespace ProjetoFaculdade6Semestre.Controllers
                 return BadRequest($"Erro: {ex.Message}");
             }
         }
+
 
         //DELETE: api/Cv/{id}
         [HttpDelete("{id}")]

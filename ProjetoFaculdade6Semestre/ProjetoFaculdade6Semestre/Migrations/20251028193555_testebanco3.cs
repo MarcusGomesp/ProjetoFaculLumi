@@ -6,11 +6,26 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     /// <inheritdoc />
-    public partial class NewDataBaseFacul : Migration
+    public partial class testebanco3 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Candidaturas",
+                columns: table => new
+                {
+                    CandidaturaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
+                    DataCandidatura = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Candidaturas", x => x.CandidaturaId);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Cvs",
                 columns: table => new
@@ -19,7 +34,8 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FileName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     FilePath = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    UploadDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UploadDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
                 },
                 constraints: table =>
                 {
@@ -35,9 +51,9 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     CvId = table.Column<int>(type: "int", nullable: false),
                     Percentual = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     Resume = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    File = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    File = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
                 },
                 constraints: table =>
                 {
@@ -57,10 +73,10 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     RoleId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    CvId = table.Column<int>(type: "int", nullable: false),
+                    CvId = table.Column<int>(type: "int", nullable: true),
                     RoleDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    OwnerId = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    OwnerId = table.Column<int>(type: "int", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
                 },
                 constraints: table =>
                 {
@@ -82,8 +98,8 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     UserName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    RoleId = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    RoleId = table.Column<int>(type: "int", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()")
                 },
                 constraints: table =>
                 {
@@ -95,6 +111,31 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         principalColumn: "RoleId",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserId", "Email", "PasswordHash", "RoleId", "UserName" },
+                values: new object[] { 1, "admin@teste.com", "$2a$11$9lmR6gE7idQeC6pkwgwXduUnKU3E7ENtUo7UCCe9ZFdK9XHLqgFMi", null, "Admin" });
+
+            migrationBuilder.InsertData(
+                table: "Cvs",
+                columns: new[] { "CvId", "FileName", "FilePath", "UserId" },
+                values: new object[] { 1, "cv_admin.pdf", "/uploads/cv_admin.pdf", 1 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Candidaturas_RoleId",
+                table: "Candidaturas",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Candidaturas_UserId",
+                table: "Candidaturas",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Cvs_UserId",
+                table: "Cvs",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Results_CvId",
@@ -117,6 +158,29 @@ namespace ProjetoFaculdade6Semestre.Migrations
                 column: "RoleId");
 
             migrationBuilder.AddForeignKey(
+                name: "FK_Candidaturas_Roles_RoleId",
+                table: "Candidaturas",
+                column: "RoleId",
+                principalTable: "Roles",
+                principalColumn: "RoleId",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Candidaturas_Users_UserId",
+                table: "Candidaturas",
+                column: "UserId",
+                principalTable: "Users",
+                principalColumn: "UserId",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Cvs_Users_UserId",
+                table: "Cvs",
+                column: "UserId",
+                principalTable: "Users",
+                principalColumn: "UserId");
+
+            migrationBuilder.AddForeignKey(
                 name: "FK_Roles_Users_OwnerId",
                 table: "Roles",
                 column: "OwnerId",
@@ -129,24 +193,23 @@ namespace ProjetoFaculdade6Semestre.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Roles_Cvs_CvId",
-                table: "Roles");
+                name: "FK_Users_Roles_RoleId",
+                table: "Users");
 
-            migrationBuilder.DropForeignKey(
-                name: "FK_Roles_Users_OwnerId",
-                table: "Roles");
+            migrationBuilder.DropTable(
+                name: "Candidaturas");
 
             migrationBuilder.DropTable(
                 name: "Results");
+
+            migrationBuilder.DropTable(
+                name: "Roles");
 
             migrationBuilder.DropTable(
                 name: "Cvs");
 
             migrationBuilder.DropTable(
                 name: "Users");
-
-            migrationBuilder.DropTable(
-                name: "Roles");
         }
     }
 }

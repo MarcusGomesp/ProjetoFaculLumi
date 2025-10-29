@@ -12,8 +12,8 @@ using ProjetoFaculdade6Semestre;
 namespace ProjetoFaculdade6Semestre.Migrations
 {
     [DbContext(typeof(AppDbContextLumi))]
-    [Migration("20251001001850_teste")]
-    partial class teste
+    [Migration("20251028193555_testebanco3")]
+    partial class testebanco3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,7 +74,12 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETUTCDATE()");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("CvId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Cvs");
 
@@ -83,7 +88,8 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         {
                             CvId = 1,
                             FileName = "cv_admin.pdf",
-                            FilePath = "/uploads/cv_admin.pdf"
+                            FilePath = "/uploads/cv_admin.pdf",
+                            UserId = 1
                         });
                 });
 
@@ -136,10 +142,10 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETUTCDATE()");
 
-                    b.Property<int>("CvId")
+                    b.Property<int?>("CvId")
                         .HasColumnType("int");
 
-                    b.Property<int>("OwnerId")
+                    b.Property<int?>("OwnerId")
                         .HasColumnType("int");
 
                     b.Property<string>("RoleDescription")
@@ -225,6 +231,17 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", b =>
+                {
+                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>
                 {
                     b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", "Cv")
@@ -241,14 +258,12 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", "Cv")
                         .WithMany("Roles")
                         .HasForeignKey("CvId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", "Owner")
                         .WithMany()
                         .HasForeignKey("OwnerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Cv");
 

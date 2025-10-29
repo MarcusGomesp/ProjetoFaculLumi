@@ -26,5 +26,10 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
         [StringLength(50)]
         public string? Status { get; set; }
 
+
+
+        [NotMapped]
+        public string? EmailCandidato { get; set; }
+
     }
 }

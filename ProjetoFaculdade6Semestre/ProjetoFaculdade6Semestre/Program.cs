@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContextLumi>(options =>
 // Injeção de dependência para os serviços
 builder.Services.AddScoped<IUser, UserServices>();
 builder.Services.AddScoped<IRole, RoleServices>();
+builder.Services.AddScoped<RoleServices>();
 builder.Services.AddScoped<ICv, CvServices>();
 builder.Services.AddScoped<IResults, ResultService>();
 builder.Services.AddScoped<ICandidatura, CandidaturaService>();

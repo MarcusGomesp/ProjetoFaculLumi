@@ -15,32 +15,43 @@ namespace ProjetoFaculdade6Semestre.Service
             _env = env;
         }
 
-        //listar todos Cv
+        // listar todos CVs
         public async Task<IEnumerable<Cv>> ListToAsync()
         {
-            return await _context.Cvs.ToListAsync();
+            return await _context.Cvs
+                .Include(c => c.User)
+                .Include(c => c.Roles)
+                .ToListAsync();
         }
 
-        // listar Cv por ID
+        // listar CV por ID
         public async Task<Cv> ListPorIdAsync(int id)
         {
-            var cv = await _context.Cvs.FirstOrDefaultAsync(c => c.CvId == id);
+            var cv = await _context.Cvs
+                .Include(c => c.User)
+                .FirstOrDefaultAsync(c => c.CvId == id);
+
             if (cv == null)
-                throw new Exception($"Cv com ID {id} não encontrado.");
+                throw new Exception($"CV com ID {id} não encontrado.");
+
             return cv;
         }
 
-        // adicionar novo CV via upload
-        public async Task<Cv> AdicionarAsync(IFormFile file)
+        // adicionar novo CV 
+        public async Task<Cv> AdicionarAsync(IFormFile file, int userId)
         {
             if (file == null || file.Length == 0)
                 throw new Exception("Nenhum arquivo enviado.");
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+                throw new Exception($"Usuário com ID {userId} não encontrado.");
 
             var uploadsFolder = Path.Combine(_env.ContentRootPath, "uploads");
             if (!Directory.Exists(uploadsFolder))
                 Directory.CreateDirectory(uploadsFolder);
 
-            var fileName = $"{DateTime.UtcNow:yyyyMMddHHmmss}_{file.FileName}";
+            var fileName = $"{DateTime.UtcNow:yyyyMMddHHmmss}_{Path.GetFileName(file.FileName)}";
             var filePath = Path.Combine(uploadsFolder, fileName);
 
             using (var stream = new FileStream(filePath, FileMode.Create))
@@ -50,8 +61,9 @@ namespace ProjetoFaculdade6Semestre.Service
 
             var cv = new Cv
             {
-                FileName = file.FileName,
-                FilePath = filePath
+                FileName = fileName,
+                FilePath = filePath,
+                UserId = userId
             };
 
             _context.Cvs.Add(cv);
@@ -60,11 +72,10 @@ namespace ProjetoFaculdade6Semestre.Service
             return cv;
         }
 
-        // deletar cv
+        // deletar CV
         public async Task<bool> DeletarAsync(int id)
         {
             var cv = await _context.Cvs.FirstOrDefaultAsync(x => x.CvId == id);
-
             if (cv == null)
                 throw new Exception($"CV com ID {id} não encontrado.");
 
@@ -75,7 +86,5 @@ namespace ProjetoFaculdade6Semestre.Service
             await _context.SaveChangesAsync();
             return true;
         }
-
-
     }
 }

@@ -1,7 +1,5 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Reflection.Metadata.Ecma335;
 using System.Text.Json.Serialization;
 
 namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
@@ -12,20 +10,21 @@ namespace ProjetoFaculdade6Semestre.Model.CadastroLumi
         public int RoleId { get; set; }
 
         [Required, StringLength(50)]
-        public string? RoleName { get; set; }
+        public string RoleName { get; set; } = string.Empty;
 
-        [ForeignKey("CV")]
+        [Required(ErrorMessage = "O campo CvId é obrigatório.")]
+        [ForeignKey("Cv")]
         public int CvId { get; set; }
 
-        [JsonIgnore]
         public Cv? Cv { get; set; }
+
+        [StringLength(255)]
         public string? RoleDescription { get; set; }
 
-
+        [Required(ErrorMessage = "O campo OwnerId é obrigatório.")]
         [ForeignKey("Owner")]
         public int OwnerId { get; set; }
 
-        [JsonIgnore]
         public User? Owner { get; set; }
 
         [JsonIgnore]

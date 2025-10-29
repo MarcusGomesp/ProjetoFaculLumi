@@ -71,7 +71,12 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETUTCDATE()");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("CvId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Cvs");
 
@@ -80,7 +85,8 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         {
                             CvId = 1,
                             FileName = "cv_admin.pdf",
-                            FilePath = "/uploads/cv_admin.pdf"
+                            FilePath = "/uploads/cv_admin.pdf",
+                            UserId = 1
                         });
                 });
 
@@ -140,7 +146,8 @@ namespace ProjetoFaculdade6Semestre.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("RoleDescription")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("RoleName")
                         .IsRequired()
@@ -222,6 +229,17 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", b =>
+                {
+                    b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ProjetoFaculdade6Semestre.Model.CadastroLumi.Result", b =>
                 {
                     b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", "Cv")
@@ -238,7 +256,7 @@ namespace ProjetoFaculdade6Semestre.Migrations
                     b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.Cv", "Cv")
                         .WithMany("Roles")
                         .HasForeignKey("CvId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ProjetoFaculdade6Semestre.Model.CadastroLumi.User", "Owner")

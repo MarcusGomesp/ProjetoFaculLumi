@@ -185,6 +185,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "requestBody": {
@@ -377,33 +385,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Role"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Role"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Role"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -426,33 +408,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Role"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Role"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Role"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -487,41 +443,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Role"
+                "$ref": "#/components/schemas/RoleRequestDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Role"
+                "$ref": "#/components/schemas/RoleRequestDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Role"
+                "$ref": "#/components/schemas/RoleRequestDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Role"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Role"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Role"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -727,6 +666,23 @@
             "maxLength": 255,
             "minLength": 0,
             "type": "string"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CvDto": {
+        "type": "object",
+        "properties": {
+          "cvId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -777,36 +733,40 @@
             "minLength": 0,
             "type": "string",
             "nullable": true
+          },
+          "emailCandidato": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Role": {
-        "required": [
-          "roleName"
-        ],
+      "RoleRequestDto": {
         "type": "object",
         "properties": {
-          "roleId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "roleName": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string"
-          },
-          "cvId": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           },
           "roleDescription": {
             "type": "string",
             "nullable": true
           },
+          "cvId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cv": {
+            "$ref": "#/components/schemas/CvDto"
+          },
           "ownerId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
+          },
+          "owner": {
+            "$ref": "#/components/schemas/UserDto"
           }
         },
         "additionalProperties": false
@@ -843,6 +803,16 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

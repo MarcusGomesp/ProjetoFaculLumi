@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ProjetoFaculdade6Semestre.Interface;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProjetoFaculdade6Semestre.DTOs;
 using ProjetoFaculdade6Semestre.Model.CadastroLumi;
+using ProjetoFaculdade6Semestre.Model.DTO;
+using ProjetoFaculdade6Semestre.Service;
 
 namespace ProjetoFaculdade6Semestre.Controllers
 {
@@ -9,64 +11,80 @@ namespace ProjetoFaculdade6Semestre.Controllers
     [ApiController]
     public class RoleController : ControllerBase
     {
-        private readonly IRole _context;
+        private readonly RoleServices _roleService;
+        private readonly AppDbContextLumi _context;
 
-        public RoleController(IRole context)
+        public RoleController(RoleServices roleService, AppDbContextLumi context)
         {
+            _roleService = roleService;
             _context = context;
         }
 
-        //Get: api/Role
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Role>>> GetRoles()
+        public async Task<IActionResult> Listar()
         {
-            var role = await _context.ListToAsync();
-            return Ok(role);
+            var roles = await _roleService.ListToAsync();
+            return Ok(roles);
         }
-
-        //Get : api/Role/Id
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<Role>>> GetRoleID(int id)
+        public async Task<IActionResult> BuscarPorId(int id)
         {
-            var role = await _context.ListPorIdAsync(id);
-
-            if (role == null)
-                return NotFound();
-
+            var role = await _roleService.ListPorIdAsync(id);
             return Ok(role);
         }
 
-        //Post: api/Roles/adicionar
         [HttpPost("adicionar")]
-        public async Task<ActionResult<Role>> PostRole([FromBody] Role role)
+        public async Task<IActionResult> Adicionar([FromBody] RoleRequestDto dto)
         {
             try
             {
-                var result = await _context.AdicionarAsync(role);
-                return Ok(result);
+                if (dto == null)
+                    return BadRequest("Dados inválidos.");
+
+                int? cvId = dto.Cv?.CvId ?? dto.CvId;
+                int? ownerId = dto.Owner?.UserId ?? dto.OwnerId;
+
+                if (cvId == null || ownerId == null)
+                    return BadRequest("Os campos CvId e OwnerId são obrigatórios.");
+
+                var cvExistente = await _context.Cvs.FirstOrDefaultAsync(c => c.CvId == cvId);
+                if (cvExistente == null)
+                    return BadRequest($"CV com ID {cvId} não encontrado.");
+
+                var ownerExistente = await _context.Users.FirstOrDefaultAsync(u => u.UserId == ownerId);
+                if (ownerExistente == null)
+                    return BadRequest($"Usuário com ID {ownerId} não encontrado.");
+
+                var role = new Role
+                {
+                    RoleName = dto.RoleName,
+                    RoleDescription = dto.RoleDescription,
+                    CvId = cvId.Value,
+                    OwnerId = ownerId.Value
+                };
+
+                var novaRole = await _roleService.AdicionarAsync(role);
+                return Ok(novaRole);
             }
             catch (Exception ex)
             {
-
-                return BadRequest($"Error ao carregar Role: {ex.Message}");
+                return BadRequest($"Erro ao salvar Role: {ex.Message}");
             }
         }
 
-
-        // DELETE: api/Role/id
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteRoleAsync([FromRoute] int id)
+        public async Task<IActionResult> Deletar(int id)
         {
-            var success = await _context.DeletarAsync(id);
-
-            if (!success)
-                return NotFound($"Role with ID {id} not found.");
-
-
-            return NoContent();
+            try
+            {
+                var result = await _roleService.DeletarAsync(id);
+                return Ok(new { sucesso = result });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro ao deletar role: {ex.Message}");
+            }
         }
-
-
     }
 }
