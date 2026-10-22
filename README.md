@@ -1,5 +1,7 @@
 # 🦋 Lumi — RH Acadêmico com Inteligência Artificial
 
+[![build](https://github.com/MarcusGomesp/ProjetoFaculLumi/actions/workflows/dotnet.yml/badge.svg)](https://github.com/MarcusGomesp/ProjetoFaculLumi/actions/workflows/dotnet.yml)
+
 Sistema de RH acadêmico onde candidatos se inscrevem em vagas de emprego e têm seus currículos avaliados **automaticamente por IA**, de acordo com o percentual de compatibilidade entre as skills do candidato e as exigidas pelo contratante.
 
 Foi meu primeiro contato direto integrando uma Inteligência Artificial em um sistema real — manipulando e interpretando, dentro da própria API, os dados retornados pela IA.
@@ -88,6 +90,13 @@ ProjetoFaculdade6Semestre/
 git clone https://github.com/MarcusGomesp/ProjetoFaculLumi.git
 cd ProjetoFaculLumi/ProjetoFaculdade6Semestre/ProjetoFaculdade6Semestre
 dotnet restore
+```
+
+As credenciais **não ficam no repositório**. Configure-as uma vez com o [User Secrets](https://learn.microsoft.com/aspnet/core/security/app-secrets) do .NET (ficam salvas só na sua máquina):
+
+```bash
+dotnet user-secrets set "Gemini:ApiKey" "<sua-chave-do-google-ai-studio>"
+dotnet user-secrets set "ConnectionStrings:ConectFacul" "<sua-connection-string-do-sql-server>"
 dotnet run
 ```
 
